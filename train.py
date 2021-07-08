@@ -10,15 +10,15 @@ while(cap.isOpened()):
     if ret == 0:
         break
     frameNo = 'C:/Frames/'+'FrameNo'+str(counter)+'.png'
-    counter = counter+1
-
+# f'{counter}.png'
     cv2.imwrite(frameNo,frame)
     cv2.imshow('frame',frame)
+    counter = counter+1
 
     if cv2.waitKey(1) & 0xff == ord('q'):
         break
-print('frame:', cap.get(cv2.CAP_PROP_FRAME_COUNTER))
+print('frame:', cap.get(cv2.CAP_PROP_FRAME_COUNT))
 print('width:', cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 print('height:', cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 cap.release()
-cv2.destoryAllWindows()
+cv2.destroyAllWindows()
