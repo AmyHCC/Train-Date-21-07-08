@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-file_path = r"C:\\Users\\chenj\\OneDrive\\桌面\\AVSS_E2.avi"
+file_path = r"C:\\Users\\chenj\\OneDrive\\桌面\Warner Brothers Intro HD.mp4"
 cap = cv2.VideoCapture(file_path)
 
 counter = 0
@@ -20,5 +20,6 @@ while(cap.isOpened()):
 print('frame:', cap.get(cv2.CAP_PROP_FRAME_COUNT))
 print('width:', cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 print('height:', cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+print('fps:', cap.get(cv2.CAP_PROP_FPS))
 cap.release()
 cv2.destroyAllWindows()
